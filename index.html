@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANApro AI Video Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^1.4.0"
+        }
+      }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+<main class="app-container">
+    <header class="app-header">
+        <h1>🔥 VANApro AI 🔥</h1>
+        <p>Generate high-quality videos from text and images.</p>
+    </header>
+
+    <div class="warning-box">
+        <h3>Vanapro VVIP Class</h3>
+        <p><b>Bimbingan belajar affiliate - Materi Hack Trik tentang Live dan VT Jalur Kiri</b></p>
+        <a class="warning-button" href="https://lynk.id/vanagroup/k757j79y7jd9" target="_blank" rel="noopener"><b>DAFTAR SEKARANG!</b></a>
+    </div>
+
+    <section class="card">
+        <h2><span class="step-number">1</span>Describe Your Video</h2>
+        <p>Write a detailed prompt to bring your vision to life.</p>
+        <textarea id="prompt-input" type="text" placeholder="e.g., An astronaut riding a horse on Mars, cinematic style"></textarea>
+    </section>
+
+    <section class="card">
+        <h2><span class="step-number">2</span>Configure Settings</h2>
+        <div class="control-group">
+            <div class="duration-control">
+                <label for="duration-slider">Duration (<span id="duration-value">5</span>s)</label>
+                <input type="range" id="duration-slider" name="duration" min="5" max="8" value="5">
+            </div>
+            <div class="aspect-ratio-control">
+                <label for="aspect-ratio-select">Aspect Ratio</label>
+                <select id="aspect-ratio-select">
+                    <option value="16:9" selected>16:9 (Landscape)</option>
+                    <option value="9:16">9:16 (Portrait)</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2><span class="step-number">3</span>Add Image (Optional)</h2>
+        <p>Provide a starting image for the video generation.</p>
+        <div id="image-preview-container">
+            <img alt="Image preview" id="img" />
+            <button id="remove-image-button" title="Remove image">&times;</button>
+        </div>
+        <label for="file-input" class="file-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+            <span>Upload Image</span>
+        </label>
+        <input id="file-input" type="file" accept="image/*" />
+    </section>
+
+    <div class="action-area">
+        <p class="note"><b style="color: #ff6b6b;">Catatan: </b>Kembali ke halaman ini lalu Klik ulang tombol jika gagal generate.</p>
+        <button id="generate-button">Mulai Hasilkan</button>
+    </div>
+
+
+    <div id="quota-error">
+        <h3>Wkwkwkwk gagal ya bro?</h3>
+        <p>Makanya baca bismillah dulu bro kalau mau generate.</p>
+        <a href="https://t.me/vanaprocourse" id="open-key" target="_blank" rel="noopener noreferrer">HUBUNGI ADMIN VANAPRO</a>
+    </div>
+
+    <div id="video-container">
+        <h3>Your Video is Ready!</h3>
+        <video id="video" autoplay loop controls></video>
+    </div>
+
+    <p id="status"></p>
+
+</main>
+
+<div id="loading-overlay">
+    <div class="spinner"></div>
+    <h3>Generating Your Masterpiece...</h3>
+    <p>Jangan di tinggalin ya, aku masih <b>berjuang😭</b></p>
+</div>
+
+<script type="module" src="index.tsx"></script>
+
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
